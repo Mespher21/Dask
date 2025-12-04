@@ -1,3 +1,2 @@
-# Este directorio contiene los datasets procesados
-# Los archivos de datos NO se suben a git (ver .gitignore)
-
+# Este archivo mantiene la carpeta en git
+# Los datos procesados se guardarán aquí

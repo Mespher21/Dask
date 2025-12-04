@@ -3,9 +3,24 @@ Script para explorar el funcionamiento básico de Dask
 Entrega 2: Revisión del funcionamiento teórico de Dask
 """
 
-import dask
-import dask.array as da
-import dask.dataframe as dd
+import sys
+
+try:
+    import dask
+    import dask.array as da
+    import dask.dataframe as dd
+except ImportError:
+    print("="*70)
+    print("ERROR: Dask no está instalado")
+    print("="*70)
+    print("\nPor favor, instala Dask ejecutando:")
+    print("  pip install dask")
+    print("\nO instala todas las dependencias:")
+    print("  pip install -r requirements.txt")
+    print("\nTambién puedes ejecutar:")
+    print("  python check_dependencies.py")
+    sys.exit(1)
+
 import pandas as pd
 import numpy as np
 import time

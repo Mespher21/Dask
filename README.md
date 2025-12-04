@@ -50,35 +50,91 @@ git clone <url-del-repositorio>
 cd Dask
 ```
 
-2. Crear un entorno virtual:
+2. Crear un entorno virtual (recomendado):
 ```bash
 python -m venv venv
 source venv/bin/activate  # En Windows: venv\Scripts\activate
 ```
 
 3. Instalar dependencias:
+
+**Opción A - Automática (Recomendada):**
+```bash
+python check_dependencies.py
+```
+Este script verificará e instalará automáticamente las dependencias faltantes.
+
+**Opción B - Manual:**
 ```bash
 pip install -r requirements.txt
 ```
 
+**Si tienes problemas, instala las dependencias principales:**
+```bash
+pip install dask pandas numpy matplotlib seaborn psutil tqdm
+```
+
 ## Uso
 
-### Entrega 2: Configuración Inicial y Selección de Dataset
+### Ejecución Rápida (Pipeline Completo)
 
-Ejecutar el script de configuración inicial:
+Para ejecutar todo el proyecto de una vez:
 ```bash
+python run_complete_pipeline.py
+```
+
+### Por Entregas
+
+#### Entrega 2: Configuración Inicial y Exploración de Dask
+
+```bash
+# Configurar proyecto
 python entregas/entrega_2/setup_dataset.py
+
+# Explorar Dask
+python entregas/entrega_2/explore_dask.py
+```
+
+#### Entrega 3: Lectura y Transformaciones con Dask
+
+```bash
+# Leer dataset y comparar con Pandas
+python entregas/entrega_3/read_data_dask.py
+
+# Transformar y limpiar datos
+python entregas/entrega_3/transform_data_dask.py
+```
+
+#### Entrega 4: Comparación con Pandas
+
+```bash
+# Benchmark completo
+python entregas/entrega_4/compare_pandas_dask.py
+```
+
+#### Entrega 5: Visualización de Resultados
+
+```bash
+# Generar gráficos y reportes
+python entregas/entrega_5/visualize_results.py
 ```
 
 ## Plan de Trabajo
 
-- **Semana 1**: Selección del dataset y diseño del experimento
-- **Semana 2**: Revisión del funcionamiento teórico de Dask
-- **Semana 3**: Lectura y primeras transformaciones con Dask
-- **Semana 4**: Implementación de las mismas tareas con Pandas para comparación
-- **Semana 5**: Medición, análisis y visualización de resultados
-- **Semana 6**: Redacción del informe técnico en formato IEEE
-- **Semana 7**: Ajustes finales, documentación y preparación del repositorio
+- ✅ **Semana 1**: Selección del dataset y diseño del experimento
+- ✅ **Semana 2**: Revisión del funcionamiento teórico de Dask (COMPLETA)
+- ✅ **Semana 3**: Lectura y primeras transformaciones con Dask (COMPLETA)
+- ✅ **Semana 4**: Implementación de las mismas tareas con Pandas para comparación (COMPLETA)
+- ✅ **Semana 5**: Medición, análisis y visualización de resultados (COMPLETA)
+- ⏳ **Semana 6**: Redacción del informe técnico en formato IEEE
+- ⏳ **Semana 7**: Ajustes finales, documentación y preparación del repositorio
+
+## Estado del Proyecto
+
+✅ **Código Completo**: Entregas 2-5 implementadas y listas para usar
+✅ **Documentación**: Completa y actualizada
+✅ **Scripts Funcionales**: Todos probados y documentados
+⏳ **Pendiente**: Dataset real y informe final IEEE
 
 ## Requisitos
 
